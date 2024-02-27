@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "Hornbill-Personal";
+    src: url("../webfonts/Hornbill-Personal Use Bold.otf");
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: "capoonPersonalUseLight";
+    src: url("../webfonts/CapoonPersonalUseLight-2RYv.ttf");
+    font-style: normal;
+}
+@font-face {
+    font-family: "OratorStd";
+    src: url("../webfonts/OratorStd.otf");
+    font-style: normal;
+}
+@font-face {
+    font-family: "myriadPro";
+    src: url("../webfonts/myriadPro/MyriadPro-Light.OTF");
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "myriadPro";
+    src: url("../webfonts/myriadPro/MyriadPro-Regular.OTF");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "myriadPro";
+    src: url("../webfonts/myriadPro/MyriadPro-Semibold.OTF");
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: "myriadPro";
+    src: url("../webfonts/myriadPro/MyriadPro-Bold.OTF");
+    font-style: normal;
+    font-weight: 600;
+}

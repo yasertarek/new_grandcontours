@@ -417,7 +417,7 @@ html {
   width: 100%;
 }
 .about__text {
-  max-width: 400px;
+  width: 400px;
 
 }
 .about-title {
@@ -1017,7 +1017,7 @@ ul.red-bullets li:not(:last-of-type):before {
     position: absolute;
     left: 0;
     right: 0;
-    background-size: 101%;
+    background-size: 100%;
     background-repeat: no-repeat;
   }
   .services-text {

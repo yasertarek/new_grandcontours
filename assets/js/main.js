@@ -5,6 +5,7 @@ const langBtn = document.getElementById("lang-btn"),
   menuBtn = document.getElementById("menu-btn"),
   navList = document.getElementById("nav-list"),
   fixedPosElements = [...document.querySelectorAll(".fixed-pos")],
+  fixedFontElements = [...document.querySelectorAll(".fixed-font")],
   mainContent = document.getElementById("main-content"),
   swiperSlides = [...document.querySelectorAll('div[data-gallery-id] .swiper-slide')],
   imgToGallery = [...document.querySelectorAll('.img-to-gallery[data-gallery-id]')],
@@ -41,6 +42,9 @@ const servicesSwipers = servicesSwipersElements.map((swiperElement) => {
     // Optional parameters
     direction: "horizontal",
     slidesPerView: 1,
+    mousewheel: {
+      invert: false,
+    },
     breakpoints: {
       // when window width is >= 320px
       900: {
@@ -69,6 +73,9 @@ const othServSwipers = othServSwipersElements.map((swiperElement) => {
     // Optional parameters
     direction: "horizontal",
     slidesPerView: 1,
+    mousewheel: {
+      invert: false,
+    },
     breakpoints: {
       // when window width is >= 320px
       900: {
@@ -97,11 +104,14 @@ swiperDialogs.forEach(dialogItem=>{
   const thumbsELement = dialogItem.querySelector('.swiper.thumbs')
   const servicesGalleryThumbs = new Swiper(`#${dialogItem.id} .swiper.thumbs`, {
     // Optional parameters
+    direction: "horizontal",
     breakpoints: {
-      // when window width is >= 320px
-      900: {
+      992: {
         direction: "vertical",
       }
+    },
+    mousewheel: {
+      invert: false,
     },
     slidesPerView: 6,
     loop: true,
@@ -124,6 +134,9 @@ swiperDialogs.forEach(dialogItem=>{
     slidesPerView: 1,
     // freeMode: true,
     loop: true,
+    mousewheel: {
+      invert: false,
+    },
     spaceBetween: 10,
   
     // Navigation arrows
@@ -188,30 +201,53 @@ window.addEventListener('scroll', (e)=>{
 
 document.getElementById('scrollTopBtn').addEventListener('click', ()=>{
   window.scrollTo(0, 0)
-})
+});
+
+[...document.querySelectorAll('.contact-form .input-field')].forEach(inpFldElmnt => {
+  const inpElmnt = inpFldElmnt.querySelector('.input');
+  if(inpElmnt){
+    inpElmnt.addEventListener('focus', ()=>{
+      inpFldElmnt.classList.add('input-field--focused')
+    })
+    inpElmnt.addEventListener('focusout', ()=>{
+      inpFldElmnt.classList.remove('input-field--focused')
+    })
+    inpElmnt.addEventListener('input', (e)=>{
+      e.currentTarget.value ? inpFldElmnt.classList.add('input-field--filled') : inpFldElmnt.classList.remove('input-field--filled')
+    })
+  }
+});
 
 /**
  * Functions
  */
 function handleRatios() {
   fixedPosElements.forEach((elmnt) => handleFixedPos(elmnt));
-  if (window.innerWidth <= breakPoint) {
+  fixedFontElements.forEach(elmnt=>handleFixedFont(elmnt));
+  document.querySelectorAll('section.sec').forEach(secElmnt=>{
+    const factor = parseFloat(getComputedStyle(document.body).width) / widthFactor;
+    if (parseFloat(getComputedStyle(document.body).width) <= breakPoint) {
+      secElmnt.style.padding = "24px";
+    } else{
+      secElmnt.style.padding = `${factor * 18}px ${factor * 36}px`;
+    }
+  })
+  if (parseFloat(getComputedStyle(document.body).width) <= breakPoint) {
     mainContent.style = null;
   } else {
     mainContent.style.paddingTop = `${
-      (parseFloat(getComputedStyle(document.body).width) / widthFactor) * 2000
+      (parseFloat(getComputedStyle(document.body).width) / widthFactor) * 1935
     }px`;
   }
 }
 function handleFixedPos(elmnt) {
-  if (window.innerWidth <= breakPoint) {
+  if (parseFloat(getComputedStyle(document.body).width) <= breakPoint) {
     elmnt.style.cssText = "";
   } else {
     const elmntProps = {
       x: Number(elmnt.getAttribute("data-fixed-pos-x")),
       y: Number(elmnt.getAttribute("data-fixed-pos-y")),
-      factor: elmnt.classList.contains('about-seca') ? 1 :
-        parseFloat(getComputedStyle(document.body).width) /
+      factor: parseFloat(getComputedStyle(document.body).width) /
         Number(elmnt.getAttribute("data-fixed-pos-factor")),
     };
     elmnt.style.cssText = `
@@ -219,5 +255,14 @@ function handleFixedPos(elmnt) {
             top: ${elmntProps.y * elmntProps.factor}px;
             transform: scale(${elmntProps.factor})
         `;
+  }
+}
+
+function handleFixedFont(elmnt) {
+  if (parseFloat(getComputedStyle(document.body).width) <= 768) {
+    elmnt.style.cssText = "";
+  } else {
+    const factor = parseFloat(getComputedStyle(document.body).width) / Number(elmnt.getAttribute("data-font-size-factor"))
+    elmnt.style.fontSize = `${factor * Number(elmnt.getAttribute("data-font-size"))}px`
   }
 }

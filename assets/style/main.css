@@ -169,7 +169,7 @@ p {
   top: 0;
   right: 0;
   display: flex;
-  z-index: 3;
+  z-index: 9;
   gap: 8px;
   padding-top: 16px;
   padding-left: 32px;
@@ -220,7 +220,7 @@ p {
   transform: translateX(0);
 }
 .nav__list a {
-  font-size: 48px;
+  font-size: 36px;
   font-family: "capoonPersonalUseLight";
   text-decoration: none;
   padding: 8px 16px;
@@ -436,6 +436,9 @@ transform: translateY(-50%);
 .fixed-pos {
   transform-origin: left top;
 }
+.main-wrap {
+  padding-top: 80vh;
+}
 .main-content {
   border-radius: 30px;
   background-color: rgba(0, 0, 0, 0.75);
@@ -444,7 +447,7 @@ transform: translateY(-50%);
 .main-content-wrap{
   backdrop-filter: blur(7px);
   z-index: 2;
-  top: 80vh;
+  /* top: 80vh; */
   position: relative;
   padding: 0 1.5%;
 }
@@ -893,11 +896,12 @@ transform: translateY(-50%);
 .oth-services-subtitle {
   color: var(--color-light-white);
   opacity: 38%;
-  font-size: 26px;
+  font-size: 12px;
   font-family: "capoonPersonalUseLight";
   font-weight: lighter;
   margin-bottom: 20px;
   margin: 0 ;
+  text-align: center;
 }
 /* End Other services */
 
@@ -910,21 +914,27 @@ transform: translateY(-50%);
 
 .fixed-btns {
   position: fixed;
-  z-index: 9;
+  z-index: 8;
   right: 12px;
   bottom: 12px;
   display: flex;
   align-items: center;
   column-gap: 8px;
+}
+.fixed-btns #scrollTopBtn {
   visibility: hidden;
   transform: translateY(50px);
   transition: transform 0.2s ease-in-out;
 }
-.fixed-btns--active {
+.fixed-btns--active #scrollTopBtn {
   visibility: visible;
   transform: translateY(0);
 }
-
+.btn--lang {
+  position: fixed;
+  left: 3.5%;
+  top: 3.5%;
+}
 .contact-form {
   max-width: 1000px;
   margin: 0 auto;
@@ -1179,6 +1189,10 @@ ul.red-bullets li:not(:last-of-type):before {
   }
   .about-mob-title {
     display: none;
+  }
+  .oth-services-subtitle {
+    font-size: 26px;
+    text-align: left;
   }
 }
 

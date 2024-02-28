@@ -1058,9 +1058,6 @@ ul.red-bullets li:not(:last-of-type):before {
   .fullName-field, .email-field {
     flex-basis: calc(50% - calc(var(--column-gap) / 2));
   }
-  .vis-card-img {
-    height: 240px;
-  }
   .feats-sec img {
     width: 750px;
     left: auto;
@@ -1157,6 +1154,9 @@ ul.red-bullets li:not(:last-of-type):before {
 }
 
 @media (min-width: 992px) {
+  .vis-card-img {
+    height: 240px;
+  }
   .vis-content {
     flex-direction: row;
   }

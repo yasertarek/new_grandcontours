@@ -19,7 +19,8 @@ const langBtn = document.getElementById("lang-btn"),
   ],
   dialogCloseBtns = [...document.querySelectorAll('.close-dialog')],
   widthFactor = 1428.47,
-  breakPoint = 575;
+  breakPoint = 575,
+  galleryDialogs = {};
 
 /**
  * Main flow and events
@@ -36,6 +37,34 @@ handleRatios();
 window.addEventListener("resize", () => {
   handleRatios();
 });
+
+document.addEventListener('keydown', (e)=>{
+  console.log('e.key = ', e.key)
+  if(e.key === 'Escape'){
+    const activeSwipers = swiperDialogs.filter(swiperItem => {
+      return swiperItem.classList.contains('gallery-dialog--active')
+    });
+    if(activeSwipers.length > 0){
+      activeSwipers.forEach(swiperItem=>{
+        swiperItem.classList.remove('gallery-dialog--active')
+      })
+    }
+  }
+})
+
+document.body.onload = ()=>{
+  document.addEventListener("backbutton", (e)=>{
+    const activeSwipers = swiperDialogs.filter(swiperItem => {
+      return swiperItem.classList.contains('gallery-dialog--active')
+    });
+    if(activeSwipers.length > 0){
+      e.preventDefault();
+      activeSwipers.forEach(swiperItem=>{
+        swiperItem.classList.remove('gallery-dialog--active')
+      })
+    }
+  }, false);
+}
 
 const servicesSwipers = servicesSwipersElements.map((swiperElement) => {
   return new Swiper(`#${swiperElement.id} .swiper`, {
@@ -128,7 +157,7 @@ swiperDialogs.forEach(dialogItem=>{
     //     el: ".swiper-scrollbar",
     //   },
   });
-  const servicesGallery = new Swiper(`#${dialogItem.id} .gallery.swiper`, {
+  galleryDialogs[dialogItem.id] = new Swiper(`#${dialogItem.id} .gallery.swiper`, {
     // Optional parameters
     direction: "horizontal",
     slidesPerView: 1,
@@ -157,10 +186,15 @@ swiperDialogs.forEach(dialogItem=>{
 })
 
 
-swiperSlides.forEach(slideItem=>{
+swiperSlides.forEach((slideItem)=>{
     slideItem.addEventListener('click', ()=>{
-      const galleryElement = document.getElementById(slideItem.parentElement.parentElement.parentElement.getAttribute('data-gallery-id'))
+      const galleryElementId = slideItem.parentElement.parentElement.parentElement.getAttribute('data-gallery-id');
+      const slideIndex = Number(slideItem.getAttribute('data-swiper-slide-index'))
+      console.log('slideItem = ', slideItem)
+      console.log('slideIndex = ', slideIndex)
+      const galleryElement = document.getElementById(galleryElementId)
         if(galleryElement){
+          galleryDialogs[galleryElementId].slideToLoop(slideIndex)
           galleryElement.classList.add('gallery-dialog--active')
         }else{
           console.error('Error: galleryELement not found ! for id = ', slideItem.parentElement.parentElement.parentElement.getAttribute('data-gallery-id'))
@@ -168,10 +202,13 @@ swiperSlides.forEach(slideItem=>{
     })
 })
 
-imgToGallery.forEach(imgItem=>{
+imgToGallery.forEach((imgItem)=>{
   imgItem.addEventListener('click', ()=>{
-    const galleryElement = document.getElementById(imgItem.getAttribute('data-gallery-id'))
+    const galleryId = imgItem.getAttribute('data-gallery-id'),
+     galleryElement = document.getElementById(galleryId),
+     imgIndex = imgItem.getAttribute('data-img-slide-index')
       if(galleryElement){
+        galleryDialogs[galleryId].slideTo(imgIndex)
         galleryElement.classList.add('gallery-dialog--active')
       }else{
         console.error('Error: galleryELement not found ! for id = ', imgItem.parentElement.parentElement.parentElement.getAttribute('data-gallery-id'))

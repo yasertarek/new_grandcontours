@@ -407,6 +407,7 @@ transform: translateY(-50%);
   position: relative;
   max-width: 100%;
   overflow-x: hidden;
+  padding-top: 80vh;
 }
 .main-wrap .bg-img {
   --padd: 3.5%;

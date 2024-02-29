@@ -168,6 +168,8 @@ swiperDialogs.forEach(dialogItem=>{
     slidesPerView: 6,
     loop: true,
     spaceBetween: 30,
+    observer: true,
+    observeParents: true,
     // freeMode: true,
     // Navigation arrows
     // navigation: {
@@ -196,7 +198,8 @@ swiperDialogs.forEach(dialogItem=>{
     //   nextEl: ".services-button-next",
     //   prevEl: ".services-button-prev",
     // },
-  
+    observer: true,
+    observeParents: true,
     thumbs: {
       swiper: servicesGalleryThumbs
     }

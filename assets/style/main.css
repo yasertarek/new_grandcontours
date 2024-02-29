@@ -175,7 +175,7 @@ p {
   padding-left: 32px;
   padding-right: 32px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
   flex-wrap: wrap;
 }
 .nav__logo {
@@ -920,13 +920,14 @@ transform: translateY(-50%);
   display: flex;
   align-items: center;
   column-gap: 8px;
-}
-.fixed-btns #scrollTopBtn {
   visibility: hidden;
   transform: translateY(50px);
   transition: transform 0.2s ease-in-out;
 }
-.fixed-btns--active #scrollTopBtn {
+.fixed-btns #scrollTopBtn {
+
+}
+.fixed-btns--active {
   visibility: visible;
   transform: translateY(0);
 }
@@ -1218,6 +1219,7 @@ ul.red-bullets li:not(:last-of-type):before {
   .nav {
     padding-left: 72px;
     padding-right: 72px;
+    justify-content: space-between;
   }
   .nav__list {
     transform: translateX(0);

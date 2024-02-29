@@ -43,6 +43,16 @@ menuBtn.addEventListener("click", (e) => {
   document.body.classList.toggle("overflow-hidden");
 });
 
+[...navList.querySelectorAll('ul li a')].forEach(navBtn=>{
+  navBtn.addEventListener('click', (e)=>{
+    if(navList.classList.contains('list--active')) {
+      navList.classList.remove('list--active')
+      menuBtn.classList.remove("close-icon");
+      document.body.classList.remove("overflow-hidden")
+    }
+  })
+})
+
 handleRatios();
 
 window.addEventListener("resize", () => {

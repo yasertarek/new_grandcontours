@@ -1171,6 +1171,9 @@ ul.red-bullets li:not(:last-of-type):before {
     /* padding-left: 64px; */
     /* padding-right: 64px; */
   }
+  .main-wrap {
+    padding-top: 0;
+  }
   .container {
     max-width: 720px;
   }

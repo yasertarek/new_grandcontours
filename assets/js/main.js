@@ -39,6 +39,10 @@ const langBtn = document.getElementById("lang-btn"),
  * Main flow and events
  */
 
+langBtn.addEventListener('click', (e)=>{
+  langBtn.classList.toggle('btn--active')
+})
+
 menuBtn.addEventListener("click", (e) => {
   navList.classList.toggle("list--active");
   menuBtn.classList.toggle("close-icon");

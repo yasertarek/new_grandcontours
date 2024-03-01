@@ -12,51 +12,89 @@
     <link rel="stylesheet" href="./assets/style/main.css" />
   </head>
   <body>
-    <button class="btn btn--lang btn--primary rounded-pill" id="lang-btn">
-      <div class="btn__icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-        >
-          <path fill="none" d="M0 0h24v24H0V0z"></path>
-          <path
-            fill="#fff"
-            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"
-          ></path>
-        </svg>
-      </div>
-      <div class="btn__text">EN</div>
-      <div class="btn__icon">
-        <svg
-          height="16"
-          fill="#fff"
-          viewBox="0 0 1792 1792"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"
-          />
-        </svg>
-      </div>
-    </button>
     <nav class="nav">
       <div class="nav__logo">
         <a href="/">Grandcontours.com</a>
       </div>
       <div class="nav__list" id="nav-list">
         <ul>
-          <li><a href="/" class="fixed-font" data-font-size="20" data-font-size-factor="1428.47">Home</a></li>
-          <li><a href="#services" class="fixed-font" data-font-size="20" data-font-size-factor="1428.47">Services</a></li>
-          <li><a href="#about" class="fixed-font" data-font-size="20" data-font-size-factor="1428.47">About us</a></li>
-          <li><a href="#contact-sec" class="fixed-font" data-font-size="20" data-font-size-factor="1428.47">Contact</a></li>
+          <li>
+            <a
+              href="/"
+              class="fixed-font"
+              data-font-size="20"
+              data-font-size-factor="1428.47"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#services"
+              class="fixed-font"
+              data-font-size="20"
+              data-font-size-factor="1428.47"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="fixed-font"
+              data-font-size="20"
+              data-font-size-factor="1428.47"
+              >About us</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact-sec"
+              class="fixed-font"
+              data-font-size="20"
+              data-font-size-factor="1428.47"
+              >Contact</a
+            >
+          </li>
         </ul>
         <!-- <button class="btn btn--icon menu-close" id="menu-close">
                 <span class="times-icon"></span>
             </button> -->
       </div>
+      <button class="btn btn--lang btn--primary rounded-pill" id="lang-btn">
+        <div class="btn__icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z"></path>
+            <path
+              fill="#fff"
+              d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"
+            ></path>
+          </svg>
+        </div>
+        <div class="btn__text">EN</div>
+        <div class="btn__icon">
+          <svg
+            height="16"
+            fill="#fff"
+            viewBox="0 0 1792 1792"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"
+            />
+          </svg>
+        </div>
+        <div class="btn__menu">
+          <ul>
+            <li>DE</li>
+            <li>En</li>
+          </ul>
+        </div>
+      </button>
       <v-btn class="btn btn--icon menu-btn" id="menu-btn">
         <span class="hamburger"></span>
       </v-btn>
@@ -146,7 +184,11 @@
               data-fixed-pos-y="715"
               data-fixed-pos-factor="1428.47"
             >
-              <img src="./assets/imgs/table-en.png" class="animate-on-scroll scroll-left" width="750px" />
+              <img
+                src="./assets/imgs/table-en.png"
+                class="animate-on-scroll scroll-left"
+                width="750px"
+              />
             </section>
             <div
               class="fixed-pos"
@@ -167,25 +209,74 @@
                   <p>Extraordinarely Results</p>
                 </div>
               </div>
-              <h3 class="services-heading animate-on-scroll scroll-left" id="services">SERVICES</h3>
+              <h3
+                class="services-heading animate-on-scroll scroll-left"
+                id="services"
+              >
+                SERVICES
+              </h3>
             </div>
             <section class="services-sec sec">
               <div class="services-text">
                 <div class="services-text-head">
-                  <h2 class="services-title fixed-font animate-on-scroll scroll-left" data-font-size="98" data-font-size-factor="1428.47">.GIPS-DEKO & DESIGN</h2>
-                  <h4 class="services-subtitle fixed-font animate-on-scroll scroll-left" data-font-size="16" data-font-size-factor="1428.47">...</h4>
-                  <h4 class="services-subtitle yellow-text fixed-font animate-on-scroll scroll-left" data-font-size="20" data-font-size-factor="1428.47">
+                  <h2
+                    class="services-title fixed-font animate-on-scroll scroll-left"
+                    data-font-size="98"
+                    data-font-size-factor="1428.47"
+                  >
+                    .GIPS-DEKO & DESIGN
+                  </h2>
+                  <h4
+                    class="services-subtitle fixed-font animate-on-scroll scroll-left"
+                    data-font-size="16"
+                    data-font-size-factor="1428.47"
+                  >
+                    ...
+                  </h4>
+                  <h4
+                    class="services-subtitle yellow-text fixed-font animate-on-scroll scroll-left"
+                    data-font-size="20"
+                    data-font-size-factor="1428.47"
+                  >
                     The Art of Gypsum in your own space
                   </h4>
                 </div>
                 <div class="services-text-content">
                   <ul class="services-text-keys animate-on-scroll scroll-right">
-                    <li class="fixed-font" data-font-size="16" data-font-size-factor="1428.47">Flexible</li>
-                    <li class="fixed-font" data-font-size="16" data-font-size-factor="1428.47">Simple</li>
-                    <li class="fixed-font active" data-font-size="16" data-font-size-factor="1428.47">Fair</li>
-                    <li class="fixed-font" data-font-size="16" data-font-size-factor="1428.47">Secure</li>
+                    <li
+                      class="fixed-font"
+                      data-font-size="16"
+                      data-font-size-factor="1428.47"
+                    >
+                      Flexible
+                    </li>
+                    <li
+                      class="fixed-font"
+                      data-font-size="16"
+                      data-font-size-factor="1428.47"
+                    >
+                      Simple
+                    </li>
+                    <li
+                      class="fixed-font active"
+                      data-font-size="16"
+                      data-font-size-factor="1428.47"
+                    >
+                      Fair
+                    </li>
+                    <li
+                      class="fixed-font"
+                      data-font-size="16"
+                      data-font-size-factor="1428.47"
+                    >
+                      Secure
+                    </li>
                   </ul>
-                  <p class="p fixed-font animate-on-scroll scroll-right" data-font-size="14" data-font-size-factor="1428.47">
+                  <p
+                    class="p fixed-font animate-on-scroll scroll-right"
+                    data-font-size="14"
+                    data-font-size-factor="1428.47"
+                  >
                     Discover the versatile possibilities of gypsum boards. These
                     cost-effective and easy-to-install building components allow
                     for flexible design of your spaces. Whether in apartments,
@@ -207,10 +298,11 @@
                 class="services-pics sec-pics"
                 id="services-gallery-0"
                 data-gallery-id="services-gallery-dialog-0"
-
               >
                 <!-- Slider main container -->
-                <div class="services-swiper swiper animate-on-scroll scroll-bottom">
+                <div
+                  class="services-swiper swiper animate-on-scroll scroll-bottom"
+                >
                   <!-- Additional required wrapper -->
                   <div class="swiper-wrapper">
                     <!-- Slides -->
@@ -348,13 +440,23 @@
               </div>
             </section>
             <section class="vis-sec sec">
-              <h2 class="vis-title h2 fixed-font animate-on-scroll scroll-left" data-font-size="94" data-font-size-factor="1428.47">.VISUALISATION.</h2>
+              <h2
+                class="vis-title h2 fixed-font animate-on-scroll scroll-left"
+                data-font-size="94"
+                data-font-size-factor="1428.47"
+              >
+                .VISUALISATION.
+              </h2>
               <div class="vis-content">
                 <div class="vis-card animate-on-scroll scroll-bottom">
                   <div class="vis-card-title">Interior</div>
                   <div class="vis-card-content">
                     <div class="vis-card-text">
-                      <p class="p fixed-font" data-font-size="14" data-font-size-factor="1428.47">
+                      <p
+                        class="p fixed-font"
+                        data-font-size="14"
+                        data-font-size-factor="1428.47"
+                      >
                         ● Immerse yourself in a world of sophistication and
                         elegance with our interior visualization. Our experts
                         utilize advanced renderings to provide you with a
@@ -384,7 +486,11 @@
                   <div class="vis-card-title">Exterior</div>
                   <div class="vis-card-content">
                     <div class="vis-card-text">
-                      <p class="p fixed-font" data-font-size="14" data-font-size-factor="1428.47">
+                      <p
+                        class="p fixed-font"
+                        data-font-size="14"
+                        data-font-size-factor="1428.47"
+                      >
                         ● Immerse yourself in a world of sophistication and
                         elegance with our interior visualization. Our experts
                         utilize advanced renderings to provide you with a
@@ -413,11 +519,23 @@
               </div>
             </section>
             <section class="oth-services-sec sec">
-              <h2 class="oth-services-title h2 fixed-font animate-on-scroll scroll-left" data-font-size="94" data-font-size-factor="1428.47">OTHER 3D SERVICES</h2>
-              <h3 class="oth-services-subtitle h4 animate-on-scroll scroll-left">
+              <h2
+                class="oth-services-title h2 fixed-font animate-on-scroll scroll-left"
+                data-font-size="94"
+                data-font-size-factor="1428.47"
+              >
+                OTHER 3D SERVICES
+              </h2>
+              <h3
+                class="oth-services-subtitle h4 animate-on-scroll scroll-left"
+              >
                 idea analysis , Diagrams und Produkts
               </h3>
-              <div class="oth-services-pics sec-pics animate-on-scroll scroll-bottom" id="oth-services-pics-0" data-gallery-id="oth-services-dialog-0">
+              <div
+                class="oth-services-pics sec-pics animate-on-scroll scroll-bottom"
+                id="oth-services-pics-0"
+                data-gallery-id="oth-services-dialog-0"
+              >
                 <!-- Slider main container -->
                 <div class="swiper">
                   <!-- Additional required wrapper -->
@@ -557,59 +675,136 @@
               </div>
             </section>
             <section class="contact-sec" id="contact-sec">
-              <h2 class="h2 contact-title text-center animate-on-scroll scroll-left">CONTACT</h2>
-              <form action="#" class="sec contact-form animate-on-scroll scroll-bottom">
+              <h2
+                class="h2 contact-title text-center animate-on-scroll scroll-left"
+              >
+                CONTACT
+              </h2>
+              <form
+                action="#"
+                class="sec contact-form animate-on-scroll scroll-bottom"
+              >
                 <div class="input-field fullName-field">
                   <!-- <label for="fullName">Full name</label> -->
                   <div class="input-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/></svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512"
+                    >
+                      <path
+                        d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
+                      />
+                    </svg>
                   </div>
                   <label for="fullName">Full name</label>
-                  <input id="fullName" name="fullName" class="input" type="text"/>
+                  <input
+                    id="fullName"
+                    name="fullName"
+                    class="input"
+                    type="text"
+                  />
                 </div>
                 <div class="input-field email-field">
                   <div class="input-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7 .3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2 .4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7 .3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2 .4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"
+                      />
+                    </svg>
                   </div>
                   <input type="email" id="email" class="input" />
                   <label for="email">Email</label>
                 </div>
                 <div class="input-field subject-field">
                   <div class="input-icon">
-                    <svg class="contact__icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M28 34h-20v4h20v-4zm12-16h-32v4h32v-4zm-32 12h32v-4h-32v4zm0-20v4h32v-4h-32z"></path>
+                    <svg
+                      class="contact__icon"
+                      viewBox="0 0 48 48"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M28 34h-20v4h20v-4zm12-16h-32v4h32v-4zm-32 12h32v-4h-32v4zm0-20v4h32v-4h-32z"
+                      ></path>
                       <path d="M0 0h48v48h-48z" fill="none"></path>
                     </svg>
                   </div>
                   <input type="text" id="subject" class="input" />
-                  <label for="subject">Subject <span class="desc-msg">(Maximum 255 char)</span></label>
+                  <label for="subject"
+                    >Subject
+                    <span class="desc-msg">(Maximum 255 char)</span></label
+                  >
                 </div>
                 <div class="input-field company-field">
                   <div class="input-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M436 480h-20V24c0-13.3-10.7-24-24-24H56C42.7 0 32 10.7 32 24v456H12c-6.6 0-12 5.4-12 12v20h448v-20c0-6.6-5.4-12-12-12zM128 76c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12V76zm0 96c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm52 148h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm76 160h-64v-84c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v84zm64-172c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40z"/></svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512"
+                    >
+                      <path
+                        d="M436 480h-20V24c0-13.3-10.7-24-24-24H56C42.7 0 32 10.7 32 24v456H12c-6.6 0-12 5.4-12 12v20h448v-20c0-6.6-5.4-12-12-12zM128 76c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12V76zm0 96c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm52 148h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm76 160h-64v-84c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v84zm64-172c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40z"
+                      />
+                    </svg>
                   </div>
                   <input type="text" id="company" class="input" />
-                  <label for="company">Company <span class="desc-msg">(Optional)</span></label>
+                  <label for="company"
+                    >Company <span class="desc-msg">(Optional)</span></label
+                  >
                 </div>
                 <div class="input-field msg-field">
                   <label for="message">Your message here</label>
                   <div class="input-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"
+                      />
+                    </svg>
                   </div>
                   <textarea class="input" id="message"></textarea>
                 </div>
                 <div class="form-actions">
-                  <button class="btn btn--primary rounded-pill" type="submit">SEND</button>
+                  <button class="btn btn--primary rounded-pill" type="submit">
+                    SEND
+                  </button>
                 </div>
               </form>
             </section>
             <footer class="animate-on-scroll scroll-top">
               <p>© Grandcontours 2022 - 2024 All rights reserved</p>
               <div class="footer-btns">
-                <button class="btn btn--primary soc-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.1 288l14.2-92.7h-88.9v-60.1c0-25.4 12.4-50.1 52.2-50.1h40.4V6.3S260.4 0 225.4 0c-73.2 0-121.1 44.4-121.1 124.7v70.6H22.9V288h81.4v224h100.2V288z"/></svg></button>
-                <button class="btn btn--primary soc-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.1 288l14.2-92.7h-88.9v-60.1c0-25.4 12.4-50.1 52.2-50.1h40.4V6.3S260.4 0 225.4 0c-73.2 0-121.1 44.4-121.1 124.7v70.6H22.9V288h81.4v224h100.2V288z"/></svg></button>
-                <button class="btn btn--primary soc-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.1 288l14.2-92.7h-88.9v-60.1c0-25.4 12.4-50.1 52.2-50.1h40.4V6.3S260.4 0 225.4 0c-73.2 0-121.1 44.4-121.1 124.7v70.6H22.9V288h81.4v224h100.2V288z"/></svg></button>
-                <button class="btn btn--primary soc-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.1 288l14.2-92.7h-88.9v-60.1c0-25.4 12.4-50.1 52.2-50.1h40.4V6.3S260.4 0 225.4 0c-73.2 0-121.1 44.4-121.1 124.7v70.6H22.9V288h81.4v224h100.2V288z"/></svg></button>
+                <button class="btn btn--primary soc-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path
+                      d="M279.1 288l14.2-92.7h-88.9v-60.1c0-25.4 12.4-50.1 52.2-50.1h40.4V6.3S260.4 0 225.4 0c-73.2 0-121.1 44.4-121.1 124.7v70.6H22.9V288h81.4v224h100.2V288z"
+                    />
+                  </svg>
+                </button>
+                <button class="btn btn--primary soc-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path
+                      d="M279.1 288l14.2-92.7h-88.9v-60.1c0-25.4 12.4-50.1 52.2-50.1h40.4V6.3S260.4 0 225.4 0c-73.2 0-121.1 44.4-121.1 124.7v70.6H22.9V288h81.4v224h100.2V288z"
+                    />
+                  </svg>
+                </button>
+                <button class="btn btn--primary soc-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path
+                      d="M279.1 288l14.2-92.7h-88.9v-60.1c0-25.4 12.4-50.1 52.2-50.1h40.4V6.3S260.4 0 225.4 0c-73.2 0-121.1 44.4-121.1 124.7v70.6H22.9V288h81.4v224h100.2V288z"
+                    />
+                  </svg>
+                </button>
+                <button class="btn btn--primary soc-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path
+                      d="M279.1 288l14.2-92.7h-88.9v-60.1c0-25.4 12.4-50.1 52.2-50.1h40.4V6.3S260.4 0 225.4 0c-73.2 0-121.1 44.4-121.1 124.7v70.6H22.9V288h81.4v224h100.2V288z"
+                    />
+                  </svg>
+                </button>
               </div>
             </footer>
           </div>
@@ -715,7 +910,11 @@
         class="btn btn--primary close-dialog"
         data-dialog-id="services-gallery-dialog-0"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path d="M242.7 256l100.1-100.1c12.3-12.3 12.3-32.2 0-44.5l-22.2-22.2c-12.3-12.3-32.2-12.3-44.5 0L176 189.3 75.9 89.2c-12.3-12.3-32.2-12.3-44.5 0L9.2 111.5c-12.3 12.3-12.3 32.2 0 44.5L109.3 256 9.2 356.1c-12.3 12.3-12.3 32.2 0 44.5l22.2 22.2c12.3 12.3 32.2 12.3 44.5 0L176 322.7l100.1 100.1c12.3 12.3 32.2 12.3 44.5 0l22.2-22.2c12.3-12.3 12.3-32.2 0-44.5L242.7 256z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512">
+          <path
+            d="M242.7 256l100.1-100.1c12.3-12.3 12.3-32.2 0-44.5l-22.2-22.2c-12.3-12.3-32.2-12.3-44.5 0L176 189.3 75.9 89.2c-12.3-12.3-32.2-12.3-44.5 0L9.2 111.5c-12.3 12.3-12.3 32.2 0 44.5L109.3 256 9.2 356.1c-12.3 12.3-12.3 32.2 0 44.5l22.2 22.2c12.3 12.3 32.2 12.3 44.5 0L176 322.7l100.1 100.1c12.3 12.3 32.2 12.3 44.5 0l22.2-22.2c12.3-12.3 12.3-32.2 0-44.5L242.7 256z"
+          />
+        </svg>
       </button>
     </div>
     <div class="gallery-dialog" id="services-gallery-dialog-1">
@@ -810,7 +1009,11 @@
         class="btn btn--primary close-dialog"
         data-dialog-id="services-gallery-dialog-1"
       >
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path d="M242.7 256l100.1-100.1c12.3-12.3 12.3-32.2 0-44.5l-22.2-22.2c-12.3-12.3-32.2-12.3-44.5 0L176 189.3 75.9 89.2c-12.3-12.3-32.2-12.3-44.5 0L9.2 111.5c-12.3 12.3-12.3 32.2 0 44.5L109.3 256 9.2 356.1c-12.3 12.3-12.3 32.2 0 44.5l22.2 22.2c12.3 12.3 32.2 12.3 44.5 0L176 322.7l100.1 100.1c12.3 12.3 32.2 12.3 44.5 0l22.2-22.2c12.3-12.3 12.3-32.2 0-44.5L242.7 256z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512">
+          <path
+            d="M242.7 256l100.1-100.1c12.3-12.3 12.3-32.2 0-44.5l-22.2-22.2c-12.3-12.3-32.2-12.3-44.5 0L176 189.3 75.9 89.2c-12.3-12.3-32.2-12.3-44.5 0L9.2 111.5c-12.3 12.3-12.3 32.2 0 44.5L109.3 256 9.2 356.1c-12.3 12.3-12.3 32.2 0 44.5l22.2 22.2c12.3 12.3 32.2 12.3 44.5 0L176 322.7l100.1 100.1c12.3 12.3 32.2 12.3 44.5 0l22.2-22.2c12.3-12.3 12.3-32.2 0-44.5L242.7 256z"
+          />
+        </svg>
       </button>
     </div>
     <div class="gallery-dialog" id="visu-gallery-dialog-0">
@@ -844,7 +1047,11 @@
         class="btn btn--primary close-dialog"
         data-dialog-id="visu-gallery-dialog-0"
       >
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path d="M242.7 256l100.1-100.1c12.3-12.3 12.3-32.2 0-44.5l-22.2-22.2c-12.3-12.3-32.2-12.3-44.5 0L176 189.3 75.9 89.2c-12.3-12.3-32.2-12.3-44.5 0L9.2 111.5c-12.3 12.3-12.3 32.2 0 44.5L109.3 256 9.2 356.1c-12.3 12.3-12.3 32.2 0 44.5l22.2 22.2c12.3 12.3 32.2 12.3 44.5 0L176 322.7l100.1 100.1c12.3 12.3 32.2 12.3 44.5 0l22.2-22.2c12.3-12.3 12.3-32.2 0-44.5L242.7 256z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512">
+          <path
+            d="M242.7 256l100.1-100.1c12.3-12.3 12.3-32.2 0-44.5l-22.2-22.2c-12.3-12.3-32.2-12.3-44.5 0L176 189.3 75.9 89.2c-12.3-12.3-32.2-12.3-44.5 0L9.2 111.5c-12.3 12.3-12.3 32.2 0 44.5L109.3 256 9.2 356.1c-12.3 12.3-12.3 32.2 0 44.5l22.2 22.2c12.3 12.3 32.2 12.3 44.5 0L176 322.7l100.1 100.1c12.3 12.3 32.2 12.3 44.5 0l22.2-22.2c12.3-12.3 12.3-32.2 0-44.5L242.7 256z"
+          />
+        </svg>
       </button>
     </div>
     <div class="gallery-dialog" id="oth-services-dialog-0">
@@ -902,7 +1109,11 @@
         class="btn btn--primary close-dialog"
         data-dialog-id="oth-services-dialog-0"
       >
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path d="M242.7 256l100.1-100.1c12.3-12.3 12.3-32.2 0-44.5l-22.2-22.2c-12.3-12.3-32.2-12.3-44.5 0L176 189.3 75.9 89.2c-12.3-12.3-32.2-12.3-44.5 0L9.2 111.5c-12.3 12.3-12.3 32.2 0 44.5L109.3 256 9.2 356.1c-12.3 12.3-12.3 32.2 0 44.5l22.2 22.2c12.3 12.3 32.2 12.3 44.5 0L176 322.7l100.1 100.1c12.3 12.3 32.2 12.3 44.5 0l22.2-22.2c12.3-12.3 12.3-32.2 0-44.5L242.7 256z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512">
+          <path
+            d="M242.7 256l100.1-100.1c12.3-12.3 12.3-32.2 0-44.5l-22.2-22.2c-12.3-12.3-32.2-12.3-44.5 0L176 189.3 75.9 89.2c-12.3-12.3-32.2-12.3-44.5 0L9.2 111.5c-12.3 12.3-12.3 32.2 0 44.5L109.3 256 9.2 356.1c-12.3 12.3-12.3 32.2 0 44.5l22.2 22.2c12.3 12.3 32.2 12.3 44.5 0L176 322.7l100.1 100.1c12.3 12.3 32.2 12.3 44.5 0l22.2-22.2c12.3-12.3 12.3-32.2 0-44.5L242.7 256z"
+          />
+        </svg>
       </button>
     </div>
     <div class="app-scrollbar">

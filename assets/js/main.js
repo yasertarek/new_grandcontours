@@ -226,8 +226,8 @@ swiperSlides.forEach((slideItem)=>{
       console.log('slideIndex = ', slideIndex)
       const galleryElement = document.getElementById(galleryElementId)
         if(galleryElement){
-          galleryDialogs[galleryElementId].slideToLoop(slideIndex)
           galleryElement.classList.add('gallery-dialog--active')
+          galleryDialogs[galleryElementId].slideTo(slideIndex)
         }else{
           console.error('Error: galleryELement not found ! for id = ', slideItem.parentElement.parentElement.parentElement.getAttribute('data-gallery-id'))
         }
@@ -240,8 +240,8 @@ imgToGallery.forEach((imgItem)=>{
      galleryElement = document.getElementById(galleryId),
      imgIndex = imgItem.getAttribute('data-img-slide-index')
       if(galleryElement){
-        galleryDialogs[galleryId].slideTo(imgIndex)
         galleryElement.classList.add('gallery-dialog--active')
+        galleryDialogs[galleryId].slideTo(imgIndex)
       }else{
         console.error('Error: galleryELement not found ! for id = ', imgItem.parentElement.parentElement.parentElement.getAttribute('data-gallery-id'))
       }

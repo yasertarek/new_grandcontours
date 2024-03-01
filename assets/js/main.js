@@ -21,6 +21,8 @@ const langBtn = document.getElementById("lang-btn"),
   scrollbar = document.querySelector(".app-scrollbar"),
   scrollbarThumb = document.querySelector(".app-scrollbar__thumb"),
 
+  animateOnScroll = [...document.querySelectorAll('.animate-on-scroll')],
+
   timeouts = [],
   widthFactor = 1428.47,
   breakPoint = 575,
@@ -275,6 +277,11 @@ window.addEventListener('scroll', (e)=>{
   }else{
     fixedBtns.classList.remove('fixed-btns--active')
   }
+  animateOnScroll.forEach(item=>{
+    if(isScrolledIntoView(item)) {
+      item.classList.add('has-scrolled')
+    }
+  })
 })
 
 document.getElementById('scrollTopBtn').addEventListener('click', ()=>{
@@ -469,4 +476,16 @@ function dragElement(elmnt, cont, trigger = elmnt) {
         IsScrollbarHandled = false;
         document.documentElement.style.scrollBehavior = 'smooth'
     }
+}
+
+function isScrolledIntoView(el) {
+  const rect = el.getBoundingClientRect();
+  const elemTop = rect.top;
+  const elemBottom = rect.bottom;
+
+  // Only completely visible elements return true:
+  const isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+  // Partially visible elements return true:
+  //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+  return isVisible;
 }

@@ -406,7 +406,7 @@ transform: translateY(-50%);
   /* min-height: 4000px; */
   position: relative;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   padding-top: 80vh;
 }
 .main-wrap .bg-img {
@@ -1091,6 +1091,34 @@ ul.red-bullets li:not(:last-of-type):before {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.animate-on-scroll {
+  visibility: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+.scroll-right {
+  transform: translateX(25%);
+}
+.scroll-left {
+  transform: translateX(-25%);
+}
+.scroll-top {
+  transform: translateY(-25%);
+}
+.scroll-bottom {
+  transform: translateY(25%);
+}
+.has-scrolled {
+  visibility: visible;
+}
+.has-scrolled.scroll-right,
+.has-scrolled.scroll-left {
+  transform: translateX(0);
+}
+.has-scrolled.scroll-top,
+.has-scrolled.scroll-bottom {
+  transform: translateY(0);
 }
 @media (min-width: 576px) {
   .fullName-field, .email-field {

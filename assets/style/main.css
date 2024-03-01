@@ -873,7 +873,6 @@ transform: translateY(-50%);
   flex: 3;
 }
 .vis-card-img {
-  flex: 2;
   height: 190px;
 
 }
@@ -1262,13 +1261,14 @@ ul.red-bullets li:not(:last-of-type):before {
 @media (min-width: 992px) {
   .vis-card-img {
     height: 240px;
+    flex: 2;
   }
   .vis-content {
     flex-direction: row;
   }
-  .vis-card-img {
+  /* .vis-card-img {
     height: 350px;
-  }
+  } */
   .gallery-dialog {
     flex-direction: row;
   }

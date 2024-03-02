@@ -51,18 +51,18 @@ menuBtn.addEventListener("click", (e) => {
   document.body.classList.toggle("overflow-hidden");
 });
 
-[...navList.querySelectorAll('ul li a')].forEach(navBtn=>{
-  navBtn.addEventListener('click', (e)=>{
-    e.preventDefault();
-    if(navList.classList.contains('list--active')) {
-      navList.classList.remove('list--active')
-      menuBtn.classList.remove("close-icon");
-      document.body.classList.remove("overflow-hidden")
-    }
-    const elmntId = navBtn.hash.replace('#', '')
-    scrollToElmnt(elmntId)
-  })
-})
+// [...navList.querySelectorAll('ul li a')].forEach(navBtn=>{
+//   navBtn.addEventListener('click', (e)=>{
+//     e.preventDefault();
+//     if(navList.classList.contains('list--active')) {
+//       navList.classList.remove('list--active')
+//       menuBtn.classList.remove("close-icon");
+//       document.body.classList.remove("overflow-hidden")
+//     }
+//     const elmntId = navBtn.hash.replace('#', '')
+//     scrollToElmnt(elmntId)
+//   })
+// })
 
 handleRatios();
 
@@ -295,7 +295,16 @@ window.addEventListener('scroll', (e)=>{
 })
 
 document.getElementById('scrollTopBtn').addEventListener('click', ()=>{
-  scrollToElmnt(0)
+  $('html, body').animate({
+      scrollTop: 0
+    }, 1500, 'easeInOutExpo');
+});
+
+$('.btn--contact').on('click', function(e){
+  e.preventDefault();
+  $('html, body').animate({
+      scrollTop: $(this.hash).offset().top
+  }, 1500, 'easeInOutExpo');
 });
 
 [...document.querySelectorAll('.contact-form .input-field')].forEach(inpFldElmnt => {
@@ -500,49 +509,60 @@ function isScrolledIntoView(el) {
   return isVisible;
 }
 
-function scrollToElmnt(elmntId) {
-  let scrollType = 'toBottom';
-  const topVal = typeof elmntId === 'number' ? elmntId : document.getElementById(elmntId).getBoundingClientRect().top
-  if(window.scrollY > topVal)  scrollType = 'toTop'
-  const scrollInterval = setInterval(() => {
+// function scrollToElmnt(elmntId) {
+//   let scrollType = 'toBottom';
+//   const topVal = typeof elmntId === 'number' ? elmntId : document.getElementById(elmntId).getBoundingClientRect().top
+//   if(window.scrollY > topVal)  scrollType = 'toTop'
+//   const scrollInterval = setInterval(() => {
 
-    if(scrollType === 'toTop'){
-      if(scrollingValue > topVal) {
-        if(scrollingValue < topVal * 20){
-          scrollingFactor *= 1.0198
-        }else {
-          scrollingFactor *= 1.00918
-        }
-        scrollingValue -= scrollingFactor
-        if(scrollingValue <= topVal) {
-          if(scrollingValue < topVal) scrollingValue = topVal
-          clearInterval(scrollInterval);
-          scrollingFactor = 1
-        }
-      }
-    }else{
-      if(scrollingValue < topVal) {
-        if(scrollingValue > topVal / 20){
-          scrollingFactor *= 1.0178
-        }else {
-          scrollingFactor *= 1.00918
-        }
-        scrollingValue += scrollingFactor
-        if(scrollingValue >= topVal) {
-          if(scrollingValue > topVal) scrollingValue = topVal
-          clearInterval(scrollInterval);
-          scrollingFactor = 1
-        }
-      }
-    }
+//     if(scrollType === 'toTop'){
+//       if(scrollingValue > topVal) {
+//         if(scrollingValue < topVal * 20){
+//           scrollingFactor *= 1.0198
+//         }else {
+//           scrollingFactor *= 1.00918
+//         }
+//         scrollingValue -= scrollingFactor
+//         if(scrollingValue <= topVal) {
+//           if(scrollingValue < topVal) scrollingValue = topVal
+//           clearInterval(scrollInterval);
+//           scrollingFactor = 1
+//         }
+//       }
+//     }else{
+//       if(scrollingValue < topVal) {
+//         if(scrollingValue > topVal / 20){
+//           scrollingFactor *= 1.0178
+//         }else {
+//           scrollingFactor *= 1.00918
+//         }
+//         scrollingValue += scrollingFactor
+//         if(scrollingValue >= topVal) {
+//           if(scrollingValue > topVal) scrollingValue = topVal
+//           clearInterval(scrollInterval);
+//           scrollingFactor = 1
+//         }
+//       }
+//     }
 
-    // if(scrollingValue > topVal / 2) scrollingFactor = 
+//     // if(scrollingValue > topVal / 2) scrollingFactor = 
 
-    window.scrollTo(0, scrollingValue)
+//     window.scrollTo(0, scrollingValue)
 
-    // else {
-    //   scrollingFactor = 1
-    //   scrollingValue = 0
-    // }
-  }, 1);
+//     // else {
+//     //   scrollingFactor = 1
+//     //   scrollingValue = 0
+//     // }
+//   }, 1);
+// }
+
+$('#nav-list ul li a').on('click', scrollToY);
+
+function scrollToY(e) {
+    e.preventDefault();
+    console.log('this.hash = ', this.hash)
+    console.log('$(this.hash).offset().top = ', $(this.hash).offset().top)
+    $('html, body').animate({
+        scrollTop: $(this.hash).offset().top
+    }, 1500, 'easeInOutExpo');
 }

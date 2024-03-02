@@ -24,7 +24,7 @@ const langBtn = document.getElementById("lang-btn"),
   animateOnScroll = [...document.querySelectorAll('.animate-on-scroll')],
 
   timeouts = [],
-  widthFactor = 1428.47,
+  widthFactor = 1536,
   breakPoint = 575,
   galleryDialogs = {};
 

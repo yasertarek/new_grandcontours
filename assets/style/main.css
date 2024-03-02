@@ -510,6 +510,7 @@ transform: translateY(-50%);
   text-align: center;
   position: relative;
   margin-top: 42px;
+  opacity: 65%;
 }
 .about-mob-title svg {
   position: absolute;
@@ -840,6 +841,7 @@ transform: translateY(-50%);
   /* align-items: center; */
   gap: 15px;
   flex-direction: column;
+  overflow: hidden;
 }
 .vis-card {
   flex-basis: 50%;

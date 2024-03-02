@@ -560,6 +560,11 @@ $('#nav-list ul li a').on('click', scrollToY);
 
 function scrollToY(e) {
     e.preventDefault();
+    if(navList.classList.contains('list--active')) {
+      navList.classList.remove('list--active')
+      menuBtn.classList.remove("close-icon");
+      document.body.classList.remove("overflow-hidden")
+    }
     console.log('this.hash = ', this.hash)
     console.log('$(this.hash).offset().top = ', $(this.hash).offset().top)
     $('html, body').animate({

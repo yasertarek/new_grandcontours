@@ -35,6 +35,8 @@ const langBtn = document.getElementById("lang-btn"),
   let scrollJump = null;
   let scrollTrackSpace = null;
   let IsScrollbarHandled = false;
+  let scrollingFactor = 1;
+  let scrollingValue = 0;
 /**
  * Main flow and events
  */
@@ -51,11 +53,14 @@ menuBtn.addEventListener("click", (e) => {
 
 [...navList.querySelectorAll('ul li a')].forEach(navBtn=>{
   navBtn.addEventListener('click', (e)=>{
+    e.preventDefault();
     if(navList.classList.contains('list--active')) {
       navList.classList.remove('list--active')
       menuBtn.classList.remove("close-icon");
       document.body.classList.remove("overflow-hidden")
     }
+    const elmntId = navBtn.hash.replace('#', '')
+    scrollToElmnt(elmntId)
   })
 })
 
@@ -262,6 +267,7 @@ dialogCloseBtns.forEach(btnItem=>{
 
 window.addEventListener('scroll', (e)=>{
   console.log('scrolling ...')
+  scrollingValue = window.scrollY
   scrollbarThumb.style.opacity = 1;
   for (var i=0; i<timeouts.length; i++) {
     clearTimeout(timeouts[i]);
@@ -289,7 +295,7 @@ window.addEventListener('scroll', (e)=>{
 })
 
 document.getElementById('scrollTopBtn').addEventListener('click', ()=>{
-  window.scrollTo(0, 0)
+  scrollToElmnt(0)
 });
 
 [...document.querySelectorAll('.contact-form .input-field')].forEach(inpFldElmnt => {
@@ -492,4 +498,51 @@ function isScrolledIntoView(el) {
   // Partially visible elements return true:
   //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
   return isVisible;
+}
+
+function scrollToElmnt(elmntId) {
+  let scrollType = 'toBottom';
+  const topVal = typeof elmntId === 'number' ? elmntId : document.getElementById(elmntId).getBoundingClientRect().top
+  if(window.scrollY > topVal)  scrollType = 'toTop'
+  const scrollInterval = setInterval(() => {
+
+    if(scrollType === 'toTop'){
+      if(scrollingValue > topVal) {
+        if(scrollingValue < topVal * 20){
+          scrollingFactor *= 1.0198
+        }else {
+          scrollingFactor *= 1.00918
+        }
+        scrollingValue -= scrollingFactor
+        if(scrollingValue <= topVal) {
+          if(scrollingValue < topVal) scrollingValue = topVal
+          clearInterval(scrollInterval);
+          scrollingFactor = 1
+        }
+      }
+    }else{
+      if(scrollingValue < topVal) {
+        if(scrollingValue > topVal / 20){
+          scrollingFactor *= 1.0178
+        }else {
+          scrollingFactor *= 1.00918
+        }
+        scrollingValue += scrollingFactor
+        if(scrollingValue >= topVal) {
+          if(scrollingValue > topVal) scrollingValue = topVal
+          clearInterval(scrollInterval);
+          scrollingFactor = 1
+        }
+      }
+    }
+
+    // if(scrollingValue > topVal / 2) scrollingFactor = 
+
+    window.scrollTo(0, scrollingValue)
+
+    // else {
+    //   scrollingFactor = 1
+    //   scrollingValue = 0
+    // }
+  }, 1);
 }

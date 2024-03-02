@@ -496,7 +496,7 @@ transform: translateY(-50%);
   width: 100%;
 }
 .about__text {
-  width: 400px;
+  width: 365px;
 
 }
 .about-title {
@@ -1157,7 +1157,7 @@ ul.red-bullets li:not(:last-of-type):before {
     flex-basis: calc(50% - calc(var(--column-gap) / 2));
   }
   .feats-sec img {
-    width: 750px;
+    width: 700px;
     left: auto;
     /* position: relative; */
   }

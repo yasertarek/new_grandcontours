@@ -1129,7 +1129,7 @@ ul.red-bullets li:not(:last-of-type):before {
 
 .animate-on-scroll {
   visibility: hidden;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 .scroll-right {
   transform: translateX(25%);

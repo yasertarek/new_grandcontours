@@ -98,6 +98,7 @@ document.body.onload = ()=>{
       })
     }
   }, false);
+  document.querySelector('.app-loading').classList.remove('app-loading--active')
 }
 
 const servicesSwipers = servicesSwipersElements.map((swiperElement) => {

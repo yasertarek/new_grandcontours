@@ -220,7 +220,7 @@ p {
   transform: translateX(0);
 }
 .nav__list a {
-  font-size: 36px;
+  font-size: 28px;
   font-family: "capoonPersonalUseLight";
   text-decoration: none;
   padding: 8px 16px;
@@ -454,7 +454,7 @@ transform: translateY(-50%);
   padding: 12px;
   --border-end: 80%;
   margin: 64px auto;
-  max-width: 94.7%;
+  max-width: 90%;
 }
 .sec::before,
 .sec::after {
@@ -503,13 +503,14 @@ transform: translateY(-50%);
   display: none;
 }
 .about-mob-title {
-  font-size: 32px;
+  --angle-width: 30px;
+  font-size: 28px;
   font-weight: bold;
   color: var(--color-light-white);
   font-family: "MyriadPro";
   text-align: center;
   position: relative;
-  margin-top: 42px;
+  margin-top: var(--angle-width);
   opacity: 65%;
 }
 .about-mob-title svg {
@@ -517,7 +518,7 @@ transform: translateY(-50%);
   left: 50%;
   top: 0;
   transform: translate(-50%, -100%);
-  width: 42px;
+  width: var(--angle-width);
   fill: var(--color-light-white);
 }
 .about__text .brand-title {
@@ -680,7 +681,6 @@ transform: translateY(-50%);
 
 .sec-pics .swiper {
   width: 70%;
-  height: 380px;
   color: #fff;
 }
 .sec-pics .swiper-slide {
@@ -1144,17 +1144,54 @@ ul.red-bullets li:not(:last-of-type):before {
   transform: translateY(25%);
 }
 .has-scrolled {
-  visibility: visible;
+  visibility: visible !important;
 }
 .has-scrolled.scroll-right,
 .has-scrolled.scroll-left {
-  transform: translateX(0);
+  transform: translateX(0) !important;
 }
 .has-scrolled.scroll-top,
 .has-scrolled.scroll-bottom {
-  transform: translateY(0);
+  transform: translateY(0) !important;
+}
+.about__content.animate-on-scroll.scroll-right {
+  visibility: visible;
+  transform: translateX(0);
+}
+.app-loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-dark-red);
+  z-index: 10;
+  display: none;
+}
+.app-loading.app-loading--active {
+  display: block;
+  
+}
+.app-loading .logo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-light-white);
+  font-size: 28px;
+  letter-spacing: 3px;
+  font-family: "OratorStd";
 }
 @media (min-width: 576px) {
+  .about__content.animate-on-scroll.scroll-right {
+    visibility: hidden;
+    transform: translateX(25%);
+  }
+  .sec-pics .swiper {
+    height: 380px;
+
+  }
   .fullName-field, .email-field {
     flex-basis: calc(50% - calc(var(--column-gap) / 2));
   }

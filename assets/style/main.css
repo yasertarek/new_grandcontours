@@ -408,7 +408,7 @@ transform: translateY(-50%);
   max-width: 100%;
   overflow: hidden;
   padding-top: 100vh;
-  transition: padding 0.5s ease-in-out;
+  transition: padding 0.75s ease-in-out 0.15s;
 }
 .main-wrap--active {
   padding-top: 80vh;

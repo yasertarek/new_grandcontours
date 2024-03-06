@@ -98,7 +98,10 @@ document.body.onload = ()=>{
       })
     }
   }, false);
+  document.body.classList.remove("overflow-hidden")
   document.querySelector('.app-loading').classList.remove('app-loading--active')
+  document.querySelector('.main-wrap').classList.add('main-wrap--active')
+  
 }
 
 const servicesSwipers = servicesSwipersElements.map((swiperElement) => {
@@ -111,7 +114,7 @@ const servicesSwipers = servicesSwipersElements.map((swiperElement) => {
     },
     breakpoints: {
       // when window width is >= 320px
-      900: {
+      768: {
         slidesPerView: 3,
         spaceBetween: 50,
       },
@@ -142,7 +145,7 @@ const othServSwipers = othServSwipersElements.map((swiperElement) => {
     },
     breakpoints: {
       // when window width is >= 320px
-      900: {
+      768: {
         slidesPerView: 3,
         spaceBetween: 50,
       },
@@ -504,7 +507,7 @@ function isScrolledIntoView(el) {
   const elemBottom = rect.bottom;
 
   // Only completely visible elements return true:
-  const isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+  const isVisible = (elemTop >= 0) && (elemBottom - (0.5 * rect.height) <= window.innerHeight);
   // Partially visible elements return true:
   //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
   return isVisible;

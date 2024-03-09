@@ -458,7 +458,7 @@ transform: translateY(-50%);
   padding: 12px;
   --border-end: 80%;
   margin: 64px auto;
-  max-width: 90%;
+  max-width: 87%;
 }
 .sec::before,
 .sec::after {
@@ -880,6 +880,7 @@ transform: translateY(-50%);
 }
 .vis-card-img {
   height: 190px;
+  flex: 1;
 
 }
 .vis-card-img img {
@@ -1021,6 +1022,14 @@ footer p {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.grand-word {
+  color: var(--color-light-white);
+  font-size: 425px;
+  opacity: 0.05;
+  font-weight: bold;
+  display: none;
 }
 
 /* Start Utils */
@@ -1166,14 +1175,17 @@ ul.red-bullets li:not(:last-of-type):before {
   position: fixed;
   left: 0;
   top: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
   background-color: var(--color-dark-red);
   z-index: 10;
   display: none;
+  align-items: center;
+  justify-content: center;
+
 }
 .app-loading.app-loading--active {
-  display: block;
+  display: flex;
   
 }
 .app-loading .logo {
@@ -1262,12 +1274,15 @@ ul.red-bullets li:not(:last-of-type):before {
   
   }
   .services-heading {
-    font-size: 68px;
+    font-size: 60px;
   }
 
 }
 
 @media (min-width: 768px) {
+  .grand-word {
+    display: block;
+  }
   .main-wrap .bg-img {
     --padd: 3.5%;
   }

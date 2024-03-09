@@ -1182,6 +1182,8 @@ ul.red-bullets li:not(:last-of-type):before {
   display: none;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  font-size: 28px;
 
 }
 .app-loading.app-loading--active {
@@ -1189,8 +1191,6 @@ ul.red-bullets li:not(:last-of-type):before {
   
 }
 .app-loading .logo {
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1198,6 +1198,24 @@ ul.red-bullets li:not(:last-of-type):before {
   font-size: 28px;
   letter-spacing: 3px;
   font-family: "OratorStd";
+}
+.loading-bar {
+  width: 10em;
+  height: 3px;
+  background-color: var(--color-dark-white);
+  position: relative;
+  overflow: hidden;
+}
+.loading-bar::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5em;
+  transform: translate(-2.5em);
+  animation: appLoading 1.5s ease infinite;
+  background-color: var(--color-light-white);
 }
 @media (min-width: 576px) {
   .about__content.animate-on-scroll.scroll-right {
@@ -1368,5 +1386,16 @@ ul.red-bullets li:not(:last-of-type):before {
   }
   .nav__list a {
     font-size: 24px;
+  }
+}
+@keyframes appLoading {
+  0% {
+    transform: translate(-2.5em);
+  }
+  50% {
+      transform: translate(5.1em);
+  }
+  100% {
+      transform: translate(-2.5em);
   }
 }

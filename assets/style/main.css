@@ -1212,7 +1212,7 @@ ul.red-bullets li:not(:last-of-type):before {
     flex-basis: calc(50% - calc(var(--column-gap) / 2));
   }
   .feats-sec img {
-    width: 700px;
+    width: 625px;
     left: auto;
     /* position: relative; */
   }

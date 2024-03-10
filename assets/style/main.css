@@ -490,7 +490,7 @@ transform: translateY(-50%);
 .about__content {
   display: flex;
   gap: 20px;
-  padding-top: 16px;
+  padding-top: 8px;
 }
 .about__logo {
   max-width: 70px;
@@ -633,6 +633,9 @@ transform: translateY(-50%);
   position: relative;
   margin-top: 24px;
 } */
+.services-swiper {
+  height: 300px;
+}
 
 .sec-pics {
   position: relative;
@@ -906,6 +909,9 @@ transform: translateY(-50%);
   margin-bottom: 20px;
   margin: 0 ;
   text-align: center;
+}
+.oth-services-pics .swiper {
+  height: 300px;
 }
 /* End Other services */
 
@@ -1259,7 +1265,7 @@ ul.red-bullets li:not(:last-of-type):before {
     text-align: left;
   }
   .h3 {
-    font-size: 53px;
+    font-size: 50px;
   }
   .container {
     max-width: 540px;

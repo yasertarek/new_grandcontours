@@ -83,21 +83,31 @@ document.addEventListener('keydown', (e)=>{
     }
   }
 })
-
+window.navigation.addEventListener("navigate", (event) => {
+  const activeSwipers = swiperDialogs.filter(swiperItem => {
+    console.log('swiperItem.parentElement.parentElement.parentElement = ', swiperItem)
+    return swiperItem.classList.contains('gallery-dialog--active') && location.hash
+  });
+  if(activeSwipers.length > 0){
+    activeSwipers.forEach(swiperItem=>{
+      swiperItem.classList.remove('gallery-dialog--active')
+    })
+  }
+})
 document.body.onload = ()=>{
   updateScrollbar();
   dragElement(scrollbarThumb, document, scrollbar);
-  document.addEventListener("backbutton", (e)=>{
-    const activeSwipers = swiperDialogs.filter(swiperItem => {
-      return swiperItem.classList.contains('gallery-dialog--active')
-    });
-    if(activeSwipers.length > 0){
-      e.preventDefault();
-      activeSwipers.forEach(swiperItem=>{
-        swiperItem.classList.remove('gallery-dialog--active')
-      })
-    }
-  }, false);
+  // document.addEventListener("backbutton", (e)=>{
+  //   const activeSwipers = swiperDialogs.filter(swiperItem => {
+  //     return swiperItem.classList.contains('gallery-dialog--active')
+  //   });
+  //   if(activeSwipers.length > 0){
+  //     e.preventDefault();
+  //     activeSwipers.forEach(swiperItem=>{
+  //       swiperItem.classList.remove('gallery-dialog--active')
+  //     })
+  //   }
+  // }, false);
   document.body.classList.remove("overflow-hidden")
   document.querySelector('.app-loading').classList.remove('app-loading--active')
   document.querySelector('.main-wrap').classList.add('main-wrap--active')
@@ -264,6 +274,7 @@ dialogCloseBtns.forEach(btnItem=>{
     if(dialog){
       console.log('dialog = ', dialog)
       dialog.classList.remove('gallery-dialog--active')
+      history.back();
     }else{
       console.log('dialog is not found ! and = ', dialog)
     }

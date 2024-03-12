@@ -175,6 +175,7 @@ swiperDialogs.forEach(dialogItem=>{
     breakpoints: {
       992: {
         direction: "vertical",
+        spaceBetween: 30,
       }
     },
     mousewheel: {
@@ -182,7 +183,7 @@ swiperDialogs.forEach(dialogItem=>{
     },
     slidesPerView: 6,
     loop: true,
-    spaceBetween: 30,
+    spaceBetween: 5,
     observer: true,
     observeParents: true,
     // freeMode: true,

@@ -95,6 +95,9 @@ window.navigation.addEventListener("navigate", (event) => {
   }
 })
 document.body.onload = ()=>{
+  document.body.classList.remove("overflow-hidden")
+  document.querySelector('.app-loading').classList.remove('app-loading--active')
+  document.querySelector('.main-wrap').classList.add('main-wrap--active')
   updateScrollbar();
   dragElement(scrollbarThumb, document, scrollbar);
   // document.addEventListener("backbutton", (e)=>{
@@ -108,10 +111,6 @@ document.body.onload = ()=>{
   //     })
   //   }
   // }, false);
-  document.body.classList.remove("overflow-hidden")
-  document.querySelector('.app-loading').classList.remove('app-loading--active')
-  document.querySelector('.main-wrap').classList.add('main-wrap--active')
-  
 }
 
 const servicesSwipers = servicesSwipersElements.map((swiperElement) => {

@@ -186,12 +186,13 @@ swiperDialogs.forEach(dialogItem=>{
       992: {
         direction: "vertical",
         spaceBetween: 30,
+        slidesPerView: 6,
       }
     },
     mousewheel: {
       invert: false,
     },
-    slidesPerView: 6,
+    slidesPerView: 3,
     loop: true,
     spaceBetween: 5,
     observer: true,

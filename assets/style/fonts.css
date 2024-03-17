@@ -5,6 +5,12 @@
     font-weight: bold;
 }
 @font-face {
+    font-family: "Hornbill-Personal";
+    src: url("../webfonts/Hornbill-Personal Use Italic.otf");
+    font-style: italic;
+    font-weight: normal;
+}
+@font-face {
     font-family: "capoonPersonalUseLight";
     src: url("../webfonts/CapoonPersonalUseLight-2RYv.ttf");
     font-style: normal;

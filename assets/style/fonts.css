@@ -11,6 +11,18 @@
     font-weight: normal;
 }
 @font-face {
+    font-family: "Hornbill-Personal";
+    src: url("../webfonts/Hornbill-Personal Use Regular.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Hornbill-Personal";
+    src: url("../webfonts/Hornbill-Personal Use BoldItalic.otf");
+    font-style: italic;
+    font-weight: bold;
+}
+@font-face {
     font-family: "capoonPersonalUseLight";
     src: url("../webfonts/CapoonPersonalUseLight-2RYv.ttf");
     font-style: normal;

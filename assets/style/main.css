@@ -1095,8 +1095,7 @@ footer p {
   font-size: 1.4rem;
   color: var(--color-light-white);
   font-family: "Hornbill-Personal";
-  font-style: italic;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1.4;
 }
 .marker{

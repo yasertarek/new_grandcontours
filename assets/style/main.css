@@ -1092,11 +1092,11 @@ footer p {
   color: #fff;
 }
 .p {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--color-light-white);
   font-family: "Hornbill-Personal";
   font-weight: normal;
-  line-height: 1.4;
+  line-height: 1.65;
   font-style: normal;
 }
 .marker{
